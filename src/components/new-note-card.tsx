@@ -153,7 +153,7 @@ export default function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
 								autoFocus
 								onChange={handleContentChanged}
 								value={content}
-								className="text-sm leading-6 bg-transparent resize-none flex-1 w-full md:h-full border-0 focus-visible:ring-0 px-0"
+								className="text-sm leading-6 bg-transparent resize-none flex-1 w-full md:h-full overflow-hidden border-0 focus-visible:ring-0 px-0"
 							/>
 							<DialogFooter className="">
 								<Button
@@ -172,7 +172,7 @@ export default function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
 									autoFocus
 									onChange={handleContentChanged}
 									value={content}
-									className="text-base leading-6 bg-transparent resize-none flex-1 w-full md:h-full border-0 focus-visible:ring-0 px-0 mt-3"
+									className="text-base leading-6 bg-transparent resize-none flex-1 w-full md:h-full overflow-hidden border-0 focus-visible:ring-0 px-0 mt-3"
 								/>
 								<>
 									<div className="flex justify-center my-3">

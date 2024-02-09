@@ -47,7 +47,12 @@ export default function NoteCard({
 						addSuffix: true,
 					})}
 				</span>
-				<p className="text-primary-foreground dark:text-secondary-foreground text-sm">{note.content}</p>
+
+				<Textarea
+					disabled
+					value={note.content}
+					className="text-primary-foreground dark:text-secondary-foreground text-sm leading-6 resize-none flex-1 w-full md:h-full overflow-hidden border-0 focus-visible:ring-0 px-0"
+				/>
 				<div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/50 to-black/0 pointer-events-none" />
 			</DialogTrigger>
 			<DialogContent className="w-full max-w-[640px] h-[90vh] md:h-[60vh] flex flex-col flex-1 outline-none rounded-2xl">
@@ -64,7 +69,7 @@ export default function NoteCard({
 						autoFocus
 						onChange={handleContentChanged}
 						value={content}
-						className="text-base leading-6 bg-transparent resize-none flex-1 w-full md:h-full border-0 focus-visible:ring-0 px-0"
+						className="text-sm leading-6 bg-transparent resize-none flex-1 w-full md:h-full overflow-hidden border-0 focus-visible:ring-0 px-0"
 					/>
 					<DialogFooter className="content-end flex flex-row gap-4">
 						<Button
